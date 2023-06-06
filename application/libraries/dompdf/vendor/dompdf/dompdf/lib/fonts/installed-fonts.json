@@ -1,0 +1,35 @@
+{
+    "poppins": {
+        "100": "C:\\xampp\\htdocs\\pariwisata\\application\\libraries\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/poppins_100_16232073db8bf5b27504ddd9eda8fe6d",
+        "200": "C:\\xampp\\htdocs\\pariwisata\\application\\libraries\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/poppins_200_b76fa84b1870fb8c79aa45f3f2556a00",
+        "200_italic": "C:\\xampp\\htdocs\\pariwisata\\application\\libraries\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/poppins_200_italic_9a141fb8ea7c253bb0821c5df4e4cbd8",
+        "100_italic": "C:\\xampp\\htdocs\\pariwisata\\application\\libraries\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/poppins_100_italic_cee6273a7b9b496d91aa60005eee5b0f",
+        "300": "C:\\xampp\\htdocs\\pariwisata\\application\\libraries\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/poppins_300_88a724d0c4595e39fa40dccf0ad45cda",
+        "300_italic": "C:\\xampp\\htdocs\\pariwisata\\application\\libraries\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/poppins_300_italic_bcd6d679732c967ab7147942b6ad5327",
+        "normal": "C:\\xampp\\htdocs\\pariwisata\\application\\libraries\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/poppins_normal_23045480cfaf29b98bbaa13751d2a157",
+        "italic": "C:\\xampp\\htdocs\\pariwisata\\application\\libraries\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/poppins_italic_9e73b8701e824ad6171351030aeeb4e4",
+        "500": "C:\\xampp\\htdocs\\pariwisata\\application\\libraries\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/poppins_500_08acae69d387673e5b4dcf6bfff6edf7",
+        "500_italic": "C:\\xampp\\htdocs\\pariwisata\\application\\libraries\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/poppins_500_italic_e27d44993e2c58e978107bf4b99db6bc",
+        "600": "C:\\xampp\\htdocs\\pariwisata\\application\\libraries\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/poppins_600_e3d6ff6e82d0ce266b37e9d93afd558b",
+        "600_italic": "C:\\xampp\\htdocs\\pariwisata\\application\\libraries\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/poppins_600_italic_b800b74db12b1e40bae2b88f3e1afdb1",
+        "bold": "C:\\xampp\\htdocs\\pariwisata\\application\\libraries\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/poppins_bold_ff8be13f45318240a45afc3360bc476d",
+        "bold_italic": "C:\\xampp\\htdocs\\pariwisata\\application\\libraries\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/poppins_bold_italic_3c5f78efb0cb0d63c4e4ad2203407376",
+        "800": "C:\\xampp\\htdocs\\pariwisata\\application\\libraries\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/poppins_800_4794c8d665a05e23ea3833ecd21e4e55",
+        "800_italic": "C:\\xampp\\htdocs\\pariwisata\\application\\libraries\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/poppins_800_italic_17b6d398a6553f2f7a6514f8e991a090",
+        "900": "C:\\xampp\\htdocs\\pariwisata\\application\\libraries\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/poppins_900_08233119af5944255d9eeddcad1c2511",
+        "900_italic": "poppins_900_italic_244102011f48ecd94a8220ad11be7898"
+    },
+    "fontawesome": {
+        "normal": "fontawesome_normal_484ad125e9261198ce6b9b4e9f24a5f7"
+    },
+    "font awesome\\ 5 brands": {
+        "normal": "font_awesome__5_brands_normal_78bc6b08fb35fc111275fcddf4c3fbea"
+    },
+    "font awesome\\ 5 free": {
+        "normal": "C:\\xampp\\htdocs\\pariwisata\\application\\libraries\\dompdf\\vendor\\dompdf\\dompdf\/lib\/fonts\/font_awesome__5_free_normal_3e6cb2fb1a1c0366cb285472283c9a7a",
+        "900": "font_awesome__5_free_900_34f773f0fe57f99c6e345e402bba7db3"
+    },
+    "material-design-iconic-font": {
+        "normal": "material_design_iconic_font_normal_0937b0c0cc2bb69bfe8e64eff8dd8c68"
+    }
+}

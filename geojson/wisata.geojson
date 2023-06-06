@@ -1,0 +1,13 @@
+{
+"type": "FeatureCollection",
+"name": "wisata",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "ele": 7.2953186, "name": "Pantai Senekip Pambang", "Point": "P1" }, "geometry": { "type": "Point", "coordinates": [ 102.48407, 1.482666 ] } },
+{ "type": "Feature", "properties": { "ele": 1.848175, "name": "Pantai Prapat Tunggal", "Point": "P2" }, "geometry": { "type": "Point", "coordinates": [ 102.01119, 1.5709839 ] } },
+{ "type": "Feature", "properties": { "ele": 2.6182861, "name": "Pantai Selat Baru", "Point": "P3" }, "geometry": { "type": "Point", "coordinates": [ 102.24845, 1.5631528 ] } },
+{ "type": "Feature", "properties": { "ele": 1.9121399, "name": "Pantai Penampar Jangkang", "Point": "P4" }, "geometry": { "type": "Point", "coordinates": [ 102.18719, 1.5685245 ] } },
+{ "type": "Feature", "properties": { "ele": 9.8836975, "name": "Air Mancur Bengkalis", "Point": "P5" }, "geometry": { "type": "Point", "coordinates": [ 102.10948, 1.4670137 ] } },
+{ "type": "Feature", "properties": { "ele": 2.5434875, "name": "Taman Batu Ampar", "Point": "P6" }, "geometry": { "type": "Point", "coordinates": [ 102.11504, 1.4729544 ] } }
+]
+}
