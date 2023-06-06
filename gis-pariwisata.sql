@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 23, 2023 at 06:06 AM
+-- Generation Time: Jun 06, 2023 at 06:15 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -33,9 +33,6 @@ CREATE TABLE `tbl_etiket` (
   `kode_pesanan` varchar(100) NOT NULL,
   `nama_pemesan` varchar(255) NOT NULL,
   `no_pemesan` varchar(20) NOT NULL,
-  `provinsi_pemesan` varchar(50) NOT NULL,
-  `kabupaten_pemesan` varchar(50) NOT NULL,
-  `kecamatan_pemesan` varchar(50) NOT NULL,
   `tanggal_rencana` date NOT NULL,
   `tanggal_expired` datetime DEFAULT NULL,
   `jumlah_orang` int(11) NOT NULL,
@@ -46,8 +43,12 @@ CREATE TABLE `tbl_etiket` (
 -- Dumping data for table `tbl_etiket`
 --
 
-INSERT INTO `tbl_etiket` (`id_etiket`, `id_wisata`, `kode_pesanan`, `nama_pemesan`, `no_pemesan`, `provinsi_pemesan`, `kabupaten_pemesan`, `kecamatan_pemesan`, `tanggal_rencana`, `tanggal_expired`, `jumlah_orang`, `total`) VALUES
-(4, 5, 'ETK-20230518131057', 'Raditya', '081234567890', 'Jawa Tengah', 'Kabupaten Kebumen', 'Kebumen', '2023-05-20', '2023-05-18 20:10:51', 3, 33000);
+INSERT INTO `tbl_etiket` (`id_etiket`, `id_wisata`, `kode_pesanan`, `nama_pemesan`, `no_pemesan`, `tanggal_rencana`, `tanggal_expired`, `jumlah_orang`, `total`) VALUES
+(4, 5, 'ETK-20230518131057', 'Raditya', '081234567890', '2023-05-20', '2023-05-18 20:10:51', 3, 33000),
+(7, 3, 'ETK-20230523110834', 'John Doe', '11111', '2023-05-24', '2023-05-23 18:08:34', 2, 10000),
+(8, 9, 'ETK-20230525222349', 'John Doe', '11111', '2023-05-25', '2023-05-26 05:23:49', 1, 20000),
+(9, 9, 'ETK-20230605203040', 'John Doe', '11111', '2023-06-06', '2023-06-06 03:30:40', 2, 40000),
+(10, 2, 'ETK-20230605210306', 'John Does', '11111', '2023-06-19', '2023-06-06 04:03:06', 3, 15000);
 
 -- --------------------------------------------------------
 
@@ -90,6 +91,29 @@ CREATE TABLE `tbl_json` (
 
 INSERT INTO `tbl_json` (`id_json`, `nama_file`, `geojson`) VALUES
 (1, 'wisata', 'wisata.geojson');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_pengunjung`
+--
+
+CREATE TABLE `tbl_pengunjung` (
+  `id` int(11) NOT NULL,
+  `id_etiket` int(11) NOT NULL,
+  `nama_pengunjung` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_pengunjung`
+--
+
+INSERT INTO `tbl_pengunjung` (`id`, `id_etiket`, `nama_pengunjung`) VALUES
+(1, 9, 'Budi'),
+(2, 9, 'Anita'),
+(3, 10, 'Kirana'),
+(4, 10, 'Adi'),
+(5, 10, 'Tukiyem');
 
 -- --------------------------------------------------------
 
@@ -146,7 +170,8 @@ INSERT INTO `tbl_wisata` (`id_wisata`, `nama_tempat`, `alamat`, `desa`, `kec`, `
 (4, 'Benteng Van Der Wijck', 'Kebumen', 'Sidayutengah, Sidayu', 'Gombong', 'Kebumen', 'Jawa Tengah', '-7.59919029111878', '109.51762162662278', 'Benteng Van Der Wijck adalah benteng pertahanan Hindia Belanda yang dibangun sekitar tahun 1820 atau permulaan abad ke 19. Benteng ini terletak di kota Gombong, sekitar 20 km sebelah barat dari Ibukota kabupaten Kebumen, Jawa Tengah, 7 km Barat Kota Karanganyar, atau 100 km dari Yogyakarta.\r\n\r\n<br>Nama benteng ini diambil dari Van Der Wijck, yang kemungkinan nama komandan pada saat itu. Nama benteng ini terpampang pada pintu sebelah kanan.</br>\r\n\r\n<br>Benteng ini kadang dihubungkan dengan nama Frans David Cochius (1787-1876), seorang Jenderal yang bertugas di daerah barat Bagelen yang namanya juga diabadikan menjadi nama Benteng Generaal Cochius. Benteng ini merupakan benteng persegi delapan satu-satunya di Indonesia.</br>\r\n', 'bentengvan.jpg', 2, 25000),
 (9, 'Gading Splash Water', 'Kebumen', 'Pejagoan ', 'Pejagoan', 'Kebumen', 'Jawa Tengah', '-7.672941267985936', '109.6436215522868', 'Memiliki luas destinasi kurang lebih 1,5 hektar, obyek wisata Gading Splash Water (GSW) Kebumen menyuguhkan spot menarik didalamnya.\r\n\r\nTempat kece yang siap memanjakan hari libur anda bersama keluarga tercinta di Kebumen Jawa Tengah.\r\nObyek wisata Gading Paradise Splash Waterpark berada tidak jauh dari pusat kota Kebumen Jawa Tengah.\r\n\r\nSehingga para wisatawan bisa mengunjungi tempat piknik Keluarga di Kebumen ini dengan mudah baik menggunakan kendaraan umum maupun pribadi.\r\n\r\nButuh waktu kurang lebih 5 menit saja dari pusat kota menggunakan kendaraan ketika inginkan explore Gading Kebumen.', 'gading1.jpg', 1, 20000),
 (5, 'Pemandian Air Panas Krakal', 'Kebumen', 'Krakal', 'Alian', 'Kebumen', 'Jawa Tengah', '-7.614143478845947', '109.69954023508987', 'PAP Krakal berlokasi di desa Krakal Kecamatan Alian, Kebumen. Tempat pemandian air panas ini terletak 11 km timur laut Kebumen, menempati kawasan dataran di kaki Pegunungan Serayu Selatan. Pebukitan di sekitar objek geowisata ini menyingkapkan batuan Formasi halang yang berumur Miosen Tengah-Pliosen Awal (16-3 juta tahun), berupa perulangan batupasir dan batulempung yang bersifat tufan. Mula jadi atau genesa terbentuknya mata air panas di daerah ini tidak berhubungan langsung dengan kegiatan magmatik. Hal tersebut ditunjukkan oleh kandungan belerangnya yang sangat kecil. Air panas Krakal mengandung sulfat (SO4) yang tinggi, yaitu sekitar 1.236 mg/liter. Sedang amonia dan fluoridanya masing-masing 3,9 dan 0,7 mg/liter.\r\n\r\n<br>Suhu air yang berkisar antara 39-42C berkaitan dengan induksi panas yang ditimbulkan oleh gesekan bongkah batuan akibat sesar. Pemunculannya ke permukaan dikarenakan muka air tanah yang telah terpanasi itu terpotong oleh bidang topografi, atau ke luar melalui retakan di sepanjang jalur sesar yang ada. Mata air panas Krakal sudah dimanfaatkan untuk pemandian sejak tahun 1905, di mana dari beberapa sumber yang ada air disalurkan melalui pipa ke dalam bak-bak pemandian. Nilai kesadahan yang mencapai 320,13 menyebabkan pipa sering tersumbat. Derajat keasamannya yang tinggi (pH=8,5) menyebabkan air tersebut rasanya pahit. Banyak masyarakat percaya bahwa air dipemandian bisa menyembuhkan berbagai penyakit kulit. Objek wisata alam ini sudah dilengkapi dengan tempat parkir, mushola, MCK, dan taman bermain yang tertata baik. Sebagai tempat pemandian, dibangun bilik-bilik kecil yang dilengkapi dengan bak untuk berendam dan 6 Kamar VIP.</br>\r\n\r\n', 'krakal.jpg', 1, 11000),
-(6, 'Wisata Alam Jembangan', 'Kebumen', 'Jembangan', 'Poncowarno', 'Kebumen', 'Jawa Tengah', '-7.6544469273832645', '109.77111853271047', 'Jembangan Kebumen menyuguhkan sebuah wisata alam dengan hamparan luas telaga dan hutan hijau yang mengelilingi. Wisata Jembangan Kebumen berdiri sejak tahun 2011 dan menjadi salah satu destinasi populer untuk dijadikan tujuan liburan dan rekreasi.\r\n\r\n<br>Tempat wisata anak di Kebumen satu ini menyediakan berbagai macam permainan dan wahana untuk sensasi berlibur yang berbeda dari biasanya.  Mulai dari sepeda air, zona outbound, kebun binatang, perahu bebek, area bermain anak, kolam memancing dan masih banyak lagi.</br>\r\n\r\n', 'jembangan.jpg', 5, 10000);
+(6, 'Wisata Alam Jembangan', 'Kebumen', 'Jembangan', 'Poncowarno', 'Kebumen', 'Jawa Tengah', '-7.6544469273832645', '109.77111853271047', 'Jembangan Kebumen menyuguhkan sebuah wisata alam dengan hamparan luas telaga dan hutan hijau yang mengelilingi. Wisata Jembangan Kebumen berdiri sejak tahun 2011 dan menjadi salah satu destinasi populer untuk dijadikan tujuan liburan dan rekreasi.\r\n\r\n<br>Tempat wisata anak di Kebumen satu ini menyediakan berbagai macam permainan dan wahana untuk sensasi berlibur yang berbeda dari biasanya.  Mulai dari sepeda air, zona outbound, kebun binatang, perahu bebek, area bermain anak, kolam memancing dan masih banyak lagi.</br>\r\n\r\n', 'jembangan.jpg', 5, 10000),
+(10, 'Pantai Pecaron', 'Di sini', '-', '-', '-', '-', '-7,7707761', '109,4185053', 'sdfsdf', 'High_resolution_wallpaper_background_ID_77701808093.jpg', 5, 15000);
 
 --
 -- Indexes for dumped tables
@@ -159,6 +184,18 @@ ALTER TABLE `tbl_etiket`
   ADD PRIMARY KEY (`id_etiket`);
 
 --
+-- Indexes for table `tbl_pengunjung`
+--
+ALTER TABLE `tbl_pengunjung`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_wisata`
+--
+ALTER TABLE `tbl_wisata`
+  ADD PRIMARY KEY (`id_wisata`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -166,7 +203,19 @@ ALTER TABLE `tbl_etiket`
 -- AUTO_INCREMENT for table `tbl_etiket`
 --
 ALTER TABLE `tbl_etiket`
-  MODIFY `id_etiket` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_etiket` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `tbl_pengunjung`
+--
+ALTER TABLE `tbl_pengunjung`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `tbl_wisata`
+--
+ALTER TABLE `tbl_wisata`
+  MODIFY `id_wisata` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
