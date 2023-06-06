@@ -81,6 +81,11 @@
 			var form_pengunjung = $('#pengunjung_form');
 			form_pengunjung.empty();
 			for (var i = 0; i < jumlah_orang; i++) {
+				if (jumlah_orang > 5) {
+					alert('Maksimal 5 orang');
+					$('#jumlah_orang').val(5);
+					return;
+				}
 				form_pengunjung.append('<div class="form-group"><label>Nama Pengunjung ' + (i + 1) + '</label><input class="au-input au-input--full" name="nama_pengunjung[]" placeholder="Misalnya : Raditya"></div>');
 			}
 		});
@@ -95,6 +100,11 @@
 			var form_pengunjung = $('#pengunjung_form');
 			form_pengunjung.empty();
 			for (var i = 0; i < jumlah_orang; i++) {
+				if (jumlah_orang > 5) {
+					alert('Maksimal 5 orang');
+					$('#jumlah_orang').val(5);
+					return;
+				}
 				form_pengunjung.append('<div class="form-group"><label>Nama Pengunjung ' + (i + 1) + '</label><input class="au-input au-input--full" name="nama_pengunjung[]" placeholder="Misalnya : Raditya"></div>');
 			}
 		});
